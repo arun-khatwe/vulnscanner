@@ -1,46 +1,63 @@
-#VulnScanner - Python-Based Vulnerability Scanner
+# 🔍 VulnScanner
 
-A modular and extensible vulnerability scanner built in Python for recon, enumeration, and CVE detection. Inspired by tools like Nmap, Nikto, and WhatWeb.
+A modular and extensible **Python-based vulnerability scanner** designed for recon, enumeration, and CVE detection. Built for red teamers, bug bounty hunters, and cybersecurity learners.
 
-##Features
+---
 
-- Port Scanner (manual + nmap)
-- Subdomain Finder
-- HTTP Header & Security Header Analyzer
-- CMS Detector (WordPress, Joomla, etc.)
-- CVE Lookup & Threat Intelligence
-- JSON, Markdown & PDF Reports
+## 🚀 Features
 
-## Project Structure
+- ✅ Custom TCP Port Scanner (with optional Nmap support)
+- 🌐 Subdomain Brute-Forcing using wordlists
+- 🔐 HTTP Header & Security Header Analyzer
+- 🧠 CMS Detection (WordPress, Joomla, etc.)
+- 📡 Real-time CVE Lookup via NVD API
+- 📝 Generates scan reports (JSON, Markdown, and PDF)
 
-vulnscanner/
-├── scanner/                 # Core vulnerability scanner modules
-│   ├── __init_.py
-│   ├── port_scanner.py
-│   ├── subdomain_finder.py
-│   ├── header_analyzer.py
-│   ├── cms_detector.py
-│   └── cve_checker.py
+---
 
-├── utils/                   # Helper modules (APIs, logger, common utils)
-│   ├── __init_.py
-│   ├── logger.py
-│   ├── api_helpers.py
-│   └── output_writer.py
+## 🧱 Project Structure
 
-├── reports/                 # Output reports saved here
-│   ├── scan_report.json
-│   ├── scan_report.md
-│   └── scan_report.pdf
+See a breakdown of the main components:
 
-├── wordlists/               # For subdomain brute-force, tech fingerprinting
-│   └── subdomains.txt
+| Folder/File          | Purpose |
+|----------------------|---------|
+| `scanner/`           | Core scanning modules (port, subdomains, headers, CMS, CVEs) |
+| `utils/`             | Helper scripts: logger, API clients, report writer |
+| `reports/`           | Output folder for all scan result files |
+| `wordlists/`         | Custom wordlists for bruteforce modules |
+| `main.py`            | Main entry point to run full scan |
+| `config.py`          | Global configuration like ports, timeouts, API keys |
+| `requirements.txt`   | Python dependencies |
+| `.gitignore`         | Ignored files like cache, venv, logs |
+| `README.md`          | Project documentation |
+| `LICENSE`            | Open-source license (MIT by default) |
 
-├── main.py                  # Entry point – runs all modules
-├── config.py                # Settings (ports, URLs, API keys, etc.)
-├── requirements.txt         # All Python dependencies
-├── README.md                # Full usage, features, setup guide
-├── .gitignore               # Ignore logs, venv,
-etc.
-└── LICENSE                  # Add MIT license or your choice
+---
+### Usage
+
+python main.py --target example.com --full-scan
+
+## Output Reports 
+ - reports/scan_report.json
+ - reports/scan_report.md
+ - reports/scan_report.pdf
+
+## Wordlists 
+ - wordlists/subdomain.txt
+
+## 🔧 Setup Instructions
+
+### 1. Clone the Repository & Install Dependencies
+
+```bash
+git clone https://github.com/arun-khatwe/vulnscanner.git
+cd vulnscanner
+
+
+
+
+
+
+
+
 

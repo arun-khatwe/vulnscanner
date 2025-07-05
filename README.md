@@ -33,17 +33,6 @@ See a breakdown of the main components:
 | `LICENSE`            | Open-source license (MIT by default) |
 
 ---
-### Usage
-
-python main.py --target example.com --full-scan
-
-## Output Reports 
- - reports/scan_report.json
- - reports/scan_report.md
- - reports/scan_report.pdf
-
-## Wordlists 
- - wordlists/subdomain.txt
 
 ## 🔧 Setup Instructions
 
@@ -53,7 +42,26 @@ python main.py --target example.com --full-scan
 git clone https://github.com/arun-khatwe/vulnscanner.git
 cd vulnscanner
 
+```
+### 2. Install Dependencies
 
+```bash
+pip install -r requirements.txt
+
+```
+### 3. Run a Full Scan
+
+```bash
+python python main.py --target example.com --full-scan
+
+```
+## Output Reports 
+ - reports/scan_report.json
+ - reports/scan_report.md
+ - reports/scan_report.pdf
+
+## Wordlists 
+ - wordlists/subdomain.txt
 
 
 
